@@ -1,0 +1,30 @@
+YouTube Video TIMESTAMPS
+00:00 - Intro + Sponsors
+03:30 - Scaffolding the project
+06:12 - Creating our todo list
+08:39 - Creating repo & pushing to GitHub
+10:23 - Linking our repo to Vercel
+12:07 - Deploying to Vercel
+13:32 - Setting up uploadThing for images
+15:40 - Displaying our mock data
+17:35 - Next.js Layouts Explained
+19:45 - Scaffolding our UI
+21:47 - Tidying up builds & enabling turbo
+24:18 - Setting up our Database
+35:14 - Dynamic Routes
+37:40 - Changing our database schema
+43:00 - Adding authentication
+54:04 - Setting up image uploading
+01:04:10 - Connecting users to images
+1:09:41 - server-only & React Taint
+1:17:18 - The next/image Component
+1:22:58 - Error management w/ Sentry
+1:32:07 - Image page w/ Parallel Routes
+2:04:15 - Fixing the upload button
+2:11:05 - Setting up toaster w/ shadcn/ui
+2:26:40 - Adding analytics w/ PostHog
+2:38:21 - Delete button w/ Server Actions
+2:49:52 - Adding rate limits w/ Upstash
+2:56:44 - Locking down uploads
+3:00:59 - Challenges for the Viewer
+3:02:35 - Outro
