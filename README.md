@@ -41,7 +41,7 @@ The codebase from Theo's [T3 App Router Tutorial on YouTube](https://github.com/
 - [x] Attach database to UI
 - [x] Add authentication (w/ clerk)
 - [x] Add image upload
-- [] "taint" (server-only)
+- [x] "taint" (server-only)
 - [] Use Next/Image component
 - [] Error management (w/ Sentry)
 - [] Routing/image page (parallel route)
