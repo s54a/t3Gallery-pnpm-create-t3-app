@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={`${GeistSans.variable} hydrated`}>
-        <body className="vsc-initialized">
+        <body className="vsc-initialized dark">
           <NextSSRPlugin
             /**
              * The `extractRouterConfig` will extract **only** the route configs
