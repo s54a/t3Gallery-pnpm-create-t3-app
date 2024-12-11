@@ -1,6 +1,11 @@
 import "server-only";
 import { db } from "~/server/db";
 import { auth } from "@clerk/nextjs/server";
+import { images } from "./db/schema";
+import { and, eq } from "drizzle-orm";
+import { redirect } from "next/navigation";
+import analyticsServerClient from "./analytics";
+// import analyticsServerClient from "./analytics";
 
 export const getMyImages = async () => {
   const user = auth();
@@ -16,15 +21,34 @@ export const getMyImages = async () => {
 
 export const getImages = async (id: number) => {
   const user = auth();
-  // if (!user.userId) throw new Error("Unauthorized");
+  if (!user.userId) throw new Error("Unauthorized");
 
-  const images = await db.query.images.findFirst({
+  const image = await db.query.images.findFirst({
     where: (model, { eq }) => eq(model.id, id),
   });
 
-  if (!images) throw new Error("Image Not Found");
+  if (!image) throw new Error("Image Not Found");
 
-  // if (images.userId !== user.userId) throw new Error("Unauthorized");
+  if (image.userId !== user.userId) throw new Error("Unauthorized");
 
-  return images;
+  return image;
+};
+
+export const deleteImage = async (id: number) => {
+  const user = auth();
+  if (!user.userId) throw new Error("Unauthorized");
+
+  await db
+    .delete(images)
+    .where(and(eq(images.id, id), eq(images.userId, user.userId)));
+
+  analyticsServerClient.capture({
+    distinctId: user.userId,
+    event: "delete image",
+    properties: {
+      imageId: id,
+    },
+  });
+
+  redirect("/");
 };
