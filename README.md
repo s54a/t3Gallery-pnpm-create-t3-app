@@ -47,8 +47,8 @@ The codebase from Theo's [T3 App Router Tutorial on YouTube](https://github.com/
 - [x] Routing/image page (parallel route)
 - [x] Update upload button to be less cringe
 - [x] Analytics (postHog)
-- [] Delete button (w/ Server Actions)
-- [] Ratelimiting (upstash)
+- [x] Delete button (w/ Server Actions)
+- [x] Ratelimiting (upstash)
 
 ## A challenge to the viewer
 
