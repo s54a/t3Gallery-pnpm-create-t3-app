@@ -46,7 +46,7 @@ The codebase from Theo's [T3 App Router Tutorial on YouTube](https://github.com/
 - [x] Error management (w/ Sentry)
 - [x] Routing/image page (parallel route)
 - [x] Update upload button to be less cringe
-- [] Analytics (postHog)
+- [x] Analytics (postHog)
 - [] Delete button (w/ Server Actions)
 - [] Ratelimiting (upstash)
 
